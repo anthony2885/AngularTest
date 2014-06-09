@@ -1,0 +1,25 @@
+<div class="row marketing">
+  <table class="table">
+	<tr>
+		<td>
+			Search
+		</td>
+		<td>
+			<input type='text' class='form-control' ng-model="searchText"></input>
+		</td>
+	</tr><tr></tr>
+  </table>
+  
+  <br/>
+  <table class="table table-striped">
+	<tr>
+		<th>No</th>
+		<th>Technology</th>
+	</tr>
+	<tr ng-repeat="awesomeThing in awesomeThings | filter:searchText">
+		<td>{{awesomeThing.no}}</td>
+		<td>{{awesomeThing.title}}</td>
+		
+	</tr>
+  </table>
+</div>
