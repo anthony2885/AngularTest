@@ -7,6 +7,7 @@
  * # MainCtrl
  * Controller of the kickStartApp
  */
+ 
 angular.module('kickStartApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
@@ -26,10 +27,7 @@ angular.module('kickStartApp')
 	  {no:14,title:'Firefox'},
 	  {no:15,title:'MVC'}
     ];
-	$scope.gridOptions = { 
-        data: 'myData',
-        columnDefs: [{field:'no', displayName:'No'}, {field:'title', displayName:'Title'}]
-    };
+	$scope.gridOptions = { data: 'awesomeThings' };
   });
   
 

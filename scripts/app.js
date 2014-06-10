@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var kickStartApp = angular.module('kickStartApp', ['ngRoute']);
+var kickStartApp = angular.module('kickStartApp', ['ngRoute','ngGrid']);
 
 kickStartApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {templateUrl: 'views/main.html', controller: 'MainCtrl'});  
