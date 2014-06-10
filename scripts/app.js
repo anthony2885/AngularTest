@@ -8,5 +8,10 @@
  *
  * Main module of the application.
  */
-angular
-  .module('kickStartApp', []);
+var kickStartApp = angular.module('kickStartApp', ['ngRoute']);
+
+kickStartApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/view1', {templateUrl: 'views/main.html', controller: 'MainCtrl'});  
+  $routeProvider.when('/view2', {templateUrl: 'views/mainng.html', controller: 'MainCtrl'});  
+  $routeProvider.otherwise({redirectTo: '/view1'});
+}]);

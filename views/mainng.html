@@ -1,3 +1,4 @@
+
 <div class="row marketing" ng-controller='MainCtrl'>
   <table class="table">
 	<tr>
@@ -11,15 +12,5 @@
   </table>
   
   <br/>
-  <table class="table table-striped">
-	<tr>
-		<th>No</th>
-		<th>Technology</th>
-	</tr>
-	<tr ng-repeat="awesomeThing in awesomeThings | filter:searchText">
-		<td>{{awesomeThing.no}}</td>
-		<td>{{awesomeThing.title}}</td>
-		
-	</tr>
-  </table>
+	<div ng-grid="gridOptions"></div>
 </div>
